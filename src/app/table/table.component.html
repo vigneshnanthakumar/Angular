@@ -1,0 +1,21 @@
+<div class="n1">
+    <h1>Welcome to {{title}}</h1>
+</div>
+<div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>ACTION</th>
+        </tr>
+        <tr *ngFor="let table of tables; let i=index">
+            <td>{{table.id}}</td>
+            <td>{{table.name}}</td>
+            <td>{{table.age}}</td>
+            <td>
+                <button (click)="removeTable(i)">Remove</button>
+            </td>
+        </tr>
+    </table>
+</div>

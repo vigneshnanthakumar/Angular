@@ -1,0 +1,26 @@
+<div>
+    <h1>Fill Form</h1>
+</div>
+<form>
+    <input type="text" [(ngModel)]="newRow.name" placeholder="Enter Name" required [ngModelOptions]="{standalone: true}"><br>
+    <input type="email" [(ngModel)]="newRow.email" placeholder="Enter Email" required [ngModelOptions]="{standalone: true}"><br>
+    <input type="tel" [(ngModel)]="newRow.phone" placeholder="Enter Phone" required [ngModelOptions]="{standalone: true}"><br>
+    <button (click)="add()">ADD</button>
+</form>
+<table>
+    <tr>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>PHONE</th>
+        <th>ACTION</th>
+    </tr>
+    <tr *ngFor="let td of tds; let i=index">
+        <td>{{td.name}}</td>
+        <td>{{td.email}}</td>
+        <td>{{td.phone}}</td>
+        <td>
+            <button (click)="remove(i)">REMOVE</button>
+        </td>
+    </tr>
+</table>
+

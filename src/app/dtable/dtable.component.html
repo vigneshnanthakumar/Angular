@@ -1,0 +1,26 @@
+<div class="n1">
+    <input type="text" [(ngModel)]="newRow.name" placeholder="Enter Name">
+    <input type="email" [(ngModel)]="newRow.email" placeholder="Enter Email">
+    <button (click)="add()">ADD</button>
+</div>
+
+<table>
+    <tr>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>ACTION</th>
+    </tr>
+    <tr *ngFor="let dt of dts; let i=index">
+        <td>
+            <input class="i" type="text" [(ngModel)]="dt.name" [readonly]="!dt.editMode">
+        </td>
+        <td>
+            <input class="i" type="email" [(ngModel)]="dt.email" [readonly]="!dt.editMode">
+        </td>
+        <td>
+            <button (click)="edit(dt)">EDIT</button>
+            <button (click)="remove(i)">REMOVE</button>
+        </td>
+    </tr>
+</table>
+

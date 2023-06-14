@@ -1,0 +1,33 @@
+.n1{
+    color: red;
+    text-align:center;
+    padding:5px;
+}
+
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td{
+    border: 2px solid black;
+    padding: 8px;
+}
+
+th{
+    background-color: rosybrown;
+}
+
+button{
+    background-color: #dc3545;
+    color:white;
+    border:none;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover{
+    background-color:#b81021;
+}

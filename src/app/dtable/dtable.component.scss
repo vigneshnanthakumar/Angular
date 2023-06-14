@@ -1,0 +1,28 @@
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 8px;
+    border: 2px solid black;
+}
+
+button,input{
+    margin-bottom: 10px;
+}
+
+button:hover{
+    background-color: red;
+}
+
+.n1{
+    border:none;
+    outline: none;
+}
+
+.i{
+    background: transparent;
+    border: none;
+    outline: none;
+}

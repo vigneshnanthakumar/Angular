@@ -1,0 +1,22 @@
+<div>
+       <h1>Fill the Details</h1>
+</div>
+
+<input type="text" [(ngModel)]="newRow.name" placeholder="Enter Name" required><br>
+<input type="email" [(ngModel)]="newRow.email" placeholder="Enter Email" required><br>
+
+<button (click)="addRow()">ADD</button>
+<table>
+    <tr>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>ACTION</th>
+    </tr>
+    <tr *ngFor="let dt of dts; let i=index">
+        <td>{{dt.name}}</td>
+        <td>{{dt.email}}</td>
+        <td>
+            <button (click)="removeRow(i)">REMOVE</button>
+        </td>
+    </tr>
+</table>

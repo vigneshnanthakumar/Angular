@@ -1,0 +1,23 @@
+div{
+    color:red;
+    text-align:center;
+}
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 8px;
+    border: 2px solid black;
+}
+
+input,select,button{
+    margin-bottom: 10px;
+}
+
+button:hover{
+    background-color:red;
+}

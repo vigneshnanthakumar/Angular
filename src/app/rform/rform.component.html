@@ -1,0 +1,41 @@
+<div>
+    <h1>Registration Form</h1>
+</div>
+<form [formGroup]="tableForm">
+    <input type="text" formControlName="name" placeholder="Enter Name" required><br>
+    <input type="email" formControlName="email" placeholder="Enter Email" required><br>
+    <input type="number" formControlName="age" placeholder="Enter Age" required><br>
+    <input type="tel" formControlName="phone" placeholder="Enter Phone" required><br>
+    <select formControlName="gender" placeholder="Select Gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="others">Others</option>
+    </select><br>
+    <button (click)="add()">ADD</button>
+    
+</form>
+
+<table>
+    <tr>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>AGE</th>
+        <th>PHONE</th>
+        <th>GENDER</th>
+        <th>ACTION</th>
+        <!-- <th>ACTION</th> -->
+    </tr>
+    <tr *ngFor="let row of rows; let i=index">
+        <td>{{row.name}}</td>
+        <td>{{row.email}}</td>
+        <td>{{row.age}}</td>
+        <td>{{row.phone}}</td>
+        <td>{{row.gender}}</td>
+        <!-- <td>
+            <button (click)="edit(i)">EDIT</button>
+        </td> -->
+        <td>
+        <button (click)="remove(i)">REMOVE</button>
+        </td>
+    </tr>
+</table>
